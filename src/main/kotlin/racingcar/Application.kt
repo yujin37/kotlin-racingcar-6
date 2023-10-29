@@ -16,15 +16,14 @@ class RacingCarValidator {
         }
         return racingCars
     }
-    fun trying(): Int {
-        println("시도 할 횟수는 몇 회인가요?")
-        val trying = Console.readLine()
-        return trying.toInt()
+    fun trying(tries: String): Int {
+        return tries.toInt()
     }
 }
 fun main() {
     println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분")
     val racingCars = RacingCarValidator().inputCars()
-    val trying = RacingCarValidator().trying()
+    println("시도 할 횟수는 몇 회인가요?")
+    val trying = RacingCarValidator().trying(Console.readLine())
     RacingGames().checkTime(racingCars, trying)
 }
