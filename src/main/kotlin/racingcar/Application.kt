@@ -17,6 +17,9 @@ class RacingCarValidator {
         return racingCars
     }
     fun trying(tries: String): Int {
+        if(tries.isEmpty()){
+            throw IllegalArgumentException()
+        }
         return tries.toInt()
     }
 }
