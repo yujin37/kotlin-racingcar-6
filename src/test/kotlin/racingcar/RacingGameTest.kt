@@ -3,7 +3,6 @@ package racingcar
 import camp.nextstep.edu.missionutils.test.NsTest
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
-import org.junit.jupiter.api.Assertions.assertTrue
 import org.assertj.core.api.Assertions.assertThat
 
 class RacingGameTest: NsTest() {
@@ -22,7 +21,7 @@ class RacingGameTest: NsTest() {
         validator.validateCarName("onew")
     }
     @Test
-    fun `이동 횟수 입력 값 체크`(){
+    fun `이동 횟수 입력 값 체크`() {
         val validator = RacingValidator()
         //빈 값 테스트
         assertThrows<IllegalArgumentException> {
@@ -33,12 +32,6 @@ class RacingGameTest: NsTest() {
         //정상 테스트
         validator.trying("6")
 
-    }
-    @Test
-    fun `레이싱 이동 함수 Boolean으로 나오는지 체크`(){
-        val validator = RacingGames().racing()
-        //True,False로 나와야 함.
-        assertTrue(validator==true || validator==false)
     }
     @Test
     fun `기존 값에 값 제대로 업데이트 하는지 확인`(){
