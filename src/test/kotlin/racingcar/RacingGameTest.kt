@@ -8,7 +8,7 @@ import org.assertj.core.api.Assertions.assertThat
 class RacingGameTest {
     @Test
     fun `자동차 이름 입력 값 체크`(){
-        val validator = RacingCarValidator()
+        val validator = RacingValidator()
         //빈 값 테스트
         assertThrows<IllegalArgumentException> {
             validator.validateCarName("")
@@ -22,7 +22,7 @@ class RacingGameTest {
     }
     @Test
     fun `이동 횟수 입력 값 체크`(){
-        val validator = RacingCarValidator()
+        val validator = RacingValidator()
         //빈 값 테스트
         assertThrows<IllegalArgumentException> {
             validator.trying("")

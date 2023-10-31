@@ -24,13 +24,11 @@ class RacingResult {
         }
         print("최종 우승자 : ")
         //var winners = "최종 우승자 : " //테스트 코드용
-        for(winner in 0 until index.size) {
+        for(winner in 0..< index.size) {
             print(cars[index[winner]])
             //winners += cars[index[winner]] //테스트 코드용
-            if (winner < index.size - 1) {
-                print(", ")
-                //winners += ", " //테스트 코드용
-            }
+            //winners += ", " //테스트 코드용
+            if (winner < index.size - 1) print(", ")
         }
         //return winners 테스트 코드용
 
