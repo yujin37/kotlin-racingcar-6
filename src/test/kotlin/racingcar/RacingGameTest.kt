@@ -1,11 +1,12 @@
 package racingcar
 
+import camp.nextstep.edu.missionutils.test.NsTest
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 import org.junit.jupiter.api.Assertions.assertTrue
 import org.assertj.core.api.Assertions.assertThat
 
-class RacingGameTest {
+class RacingGameTest: NsTest() {
     @Test
     fun `자동차 이름 입력 값 체크`(){
         val validator = RacingValidator()
@@ -55,6 +56,10 @@ class RacingGameTest {
         assertThat(result[0]).isEqualTo("")
         assertThat(result[1]).isEqualTo("")
         assertThat(result[2]).isEqualTo("")
+    }
+
+    public override fun runMain() {
+        main()
     }
     //아래 함수는 리턴값으로 비교하여 테스트 완료. 현재는 출력자리로 주석 처리
     /*
