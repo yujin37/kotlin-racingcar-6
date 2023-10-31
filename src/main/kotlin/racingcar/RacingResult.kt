@@ -9,7 +9,7 @@ class RacingResult {
         }
         //return result //테스트 코드용
     }
-    fun winnerResult(cars:List<String>, race:List<String>){
+    fun winnerFind(race:List<String>): MutableList<Int> {
         val index = mutableListOf<Int>()
         var nowMax:Int = 0
         for(i in race.indices){
@@ -22,7 +22,11 @@ class RacingResult {
                 index.add(i)
             }
         }
+        return index
+    }
+    fun winnerResult(cars:List<String>, race:List<String>){
         print("최종 우승자 : ")
+        val index = winnerFind(race)
         //var winners = "최종 우승자 : " //테스트 코드용
         for(winner in 0..< index.size) {
             print(cars[index[winner]])
