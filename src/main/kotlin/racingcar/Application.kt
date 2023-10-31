@@ -24,8 +24,10 @@ class RacingValidator {
 }
 fun main() {
     println("경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)")
-    val racingCars = RacingValidator().inputCars(Console.readLine())
+    val tempCars = Console.readLine()
+    val racingCars = RacingValidator().inputCars(tempCars)
     println("시도 할 횟수는 몇 회인가요?")
-    val trying = RacingValidator().trying(Console.readLine())
+    val times = Console.readLine()
+    val trying = RacingValidator().trying(times)
     RacingGames().checkTime(racingCars, trying)
 }
