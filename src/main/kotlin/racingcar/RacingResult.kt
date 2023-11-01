@@ -11,7 +11,7 @@ class RacingResult {
     }
     private fun winnerFind(race:List<String>): MutableList<Int> {
         val index = mutableListOf<Int>()
-        var nowMax:Int = 0
+        var nowMax: Int = 0
         for(i in race.indices){
             if(nowMax<race[i].length){
                 nowMax = race[i].length
