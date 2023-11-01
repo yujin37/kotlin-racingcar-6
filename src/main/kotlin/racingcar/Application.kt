@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Console
 
 class RacingValidator {
     fun validateCarName(checkName: String) {
-        if(checkName.isEmpty() || checkName.length > 5) {
+        if(checkName.isEmpty() || checkName.length > 5 || checkName == " ") {
             throw IllegalArgumentException()
         }
     }
