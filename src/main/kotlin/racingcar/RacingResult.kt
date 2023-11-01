@@ -9,7 +9,7 @@ class RacingResult {
         }
         //return result //테스트 코드용
     }
-    fun winnerFind(race:List<String>): MutableList<Int> {
+    private fun winnerFind(race:List<String>): MutableList<Int> {
         val index = mutableListOf<Int>()
         var nowMax:Int = 0
         for(i in race.indices){

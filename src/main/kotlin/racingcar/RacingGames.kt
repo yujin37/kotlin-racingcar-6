@@ -4,7 +4,7 @@ import camp.nextstep.edu.missionutils.Randoms
 
 class RacingGames {
     //움직이는지 체크
-    fun racing(): Boolean {
+    private fun racing(): Boolean {
         val num = Randoms.pickNumberInRange(0, 9)
         if(num>= 4) return true
         return false
